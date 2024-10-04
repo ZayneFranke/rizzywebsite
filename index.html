@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizz-tastic Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Rizz-tastic Website!</h1>
+    <p>Click the button below for a surprise!</p>
+    
+    <button id="rizzButton">Get Rizzed Up!</button>
+    
+    <div id="rizzMessage" style="margin-top: 20px; font-size: 1.2em;"></div>
+
+    <script>
+        document.getElementById('rizzButton').addEventListener('click', function() {
+            const messages = [
+                "You're looking fantastic today!",
+                "Did it hurt? When you fell from heaven?",
+                "You're like a fine wine, getting better with time!",
+                "Are you a magician? Because every time I look at you, everyone else disappears!",
+                "If you were a vegetable, you’d be a cute-cumber!"
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('rizzMessage').innerText = messages[randomIndex];
+        });
+    </script>
+
+</body>
+</html>
